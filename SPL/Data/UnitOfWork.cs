@@ -8,14 +8,16 @@ namespace SPL.Data
     {
         private readonly SPLDatabaseContext _context;
         private readonly ILogger _logger;
+        private readonly string _apiConfiguration;
+
         public IBranchRepository Branch { get; private set; }
-        public IContactRepository Contact { get; set; }
+        public IContactRepository Contact { get; private set; }
         public IShipmentRepository Shipment { get; private set; }
-        public IProspectRepository Prospect { get; set; }
-        public IUserAuthRepository UserAuth { get; set; }
-        public IUPDSGenericResultRepository UPDSGenericResult { get; set; }
-        public IWaselAddressDetailsRepository WaselAddressDetails { get; set; }
-        public IAccountRepository Account { get; set; }
+        public IProspectRepository Prospect { get; private set; }
+        public IUserAuthRepository UserAuth { get; private set; }
+        public IUPDSGenericResultRepository UPDSGenericResult { get; private set; }
+        public IWaselAddressDetailsRepository WaselAddressDetails { get; private set; }
+        public IAccountRepository Account { get; private set; }
 
         public UnitOfWork(
             SPLDatabaseContext context,

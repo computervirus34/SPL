@@ -18,24 +18,26 @@ namespace SPL.Repositories
             _logger = logger;
             this._dbSet = context.Set<T>();
         }
-        public Task<bool> Add(T entity)
+
+        public virtual async Task<bool> Add(T entity)
+        {
+            await _dbSet.AddAsync(entity);
+            return true;
+        }
+
+        public virtual async Task<IEnumerable<T>> All()
+        {
+            return await _dbSet.ToListAsync();
+        }
+
+        public virtual Task<bool> Delete(int Id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<T>> All()
+        public virtual async Task<T> GetByID(int Id)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> Delete(int Id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<T> GetByID(int Id)
-        {
-            throw new NotImplementedException();
+            return await _dbSet.FindAsync(Id);
         }
 
         public Task<bool> Update(T entity)
