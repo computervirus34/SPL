@@ -2,7 +2,8 @@
 
 namespace SPL.IRepositories
 {
-    public interface IUPDSGenericResultRepository:IGenericRepository<UPDSGenericReult>
+    public interface IUPDSGenericResultRepository:IGenericRepository<WaselAddressDetails>
     {
+        Task<GetUPDSAddressesResponse> GetAddresses(PinCodeModel pinCode, string externalBaseURL);
     }
 }

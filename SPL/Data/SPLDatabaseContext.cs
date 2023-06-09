@@ -23,6 +23,7 @@ namespace SPL.Data
         public virtual DbSet<UPDSGenericReult> UPDSGenericReults { get; set; }
         public virtual DbSet<WaselAddressDetails> WaselAddressDetails { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<PinCodeModel> PinCodes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Branch>()
@@ -53,6 +54,9 @@ namespace SPL.Data
                 .Property(b => b.Id)
                 .HasDefaultValueSql("NEWID()");
             modelBuilder.Entity<Account>()
+               .Property(b => b.Id)
+               .HasDefaultValueSql("NEWID()");
+            modelBuilder.Entity<PinCodeModel>()
                .Property(b => b.Id)
                .HasDefaultValueSql("NEWID()");
         }

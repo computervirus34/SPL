@@ -1,5 +1,6 @@
 ﻿using SPL.IConfiguration;
 using SPL.IRepositories;
+using SPL.Models;
 using SPL.Repositories;
 
 namespace SPL.Data
@@ -16,6 +17,7 @@ namespace SPL.Data
         public IProspectRepository Prospect { get; private set; }
         public IUserAuthRepository UserAuth { get; private set; }
         public IUPDSGenericResultRepository UPDSGenericResult { get; private set; }
+        public IPinCodeRepository PinCode { get; private set; }
         public IWaselAddressDetailsRepository WaselAddressDetails { get; private set; }
         public IAccountRepository Account { get; private set; }
 
@@ -34,6 +36,7 @@ namespace SPL.Data
             UPDSGenericResult = new UPDSGenericResultRepository(_context, _logger);
             WaselAddressDetails = new WaselAddressDetailsRepository(_context, _logger);
             Account = new AccountRepository(_context, _logger);
+            PinCode = new PinCodeRepository(_context, _logger);
         }
 
         public async Task CompleteAsync()
