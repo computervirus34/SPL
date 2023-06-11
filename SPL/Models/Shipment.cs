@@ -1,4 +1,7 @@
-﻿namespace SPL.Models
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SPL.Models
 {
     public class Shipment
     {
@@ -26,8 +29,10 @@
         public string? IDType { get; set; }
         public string? InternationalIDNumber { get; set; }
         public string? ItemOrigin { get; set; }
+        [Column(TypeName = "decimal(18,4)")]
         public decimal? ItemPrice { get; set; }
         public string? PaymentType { get; set; }
+        [Column(TypeName = "decimal(18,4)")]
         public decimal? ShipmentWeight { get; set; }
         public string? ShipmentContentType { get; set; }
         public string? TransportationType { get; set; }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SPL.Data;
 
@@ -11,9 +12,11 @@ using SPL.Data;
 namespace SPL.Migrations
 {
     [DbContext(typeof(SPLDatabaseContext))]
-    partial class SPLDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20230611171643_UpdatePrecission in Shipment")]
+    partial class UpdatePrecissioninShipment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

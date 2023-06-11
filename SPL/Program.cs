@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<SPLDatabaseContext>(item => item.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddSingleton<AppConfigurations>();
+//builder.Services.AddSingleton<AppConfigurations>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
 

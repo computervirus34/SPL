@@ -67,5 +67,30 @@ namespace SPL.Repositories
         {
             throw new NotImplementedException();
         }
+
+        Task<GetUPDSAddressesResponse> IUPDSGenericResultRepository.GetAddresses(PinCodeModel pinCode, string externalBaseURL)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IEnumerable<WaselAddressDetails>> IGenericRepository<WaselAddressDetails>.All()
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<WaselAddressDetails> IGenericRepository<WaselAddressDetails>.GetByID(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Add(WaselAddressDetails entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Update(WaselAddressDetails entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

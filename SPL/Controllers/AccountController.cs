@@ -27,7 +27,7 @@ namespace SPL.Controllers
         {
             return View();
         }
-
+        
         [HttpPost]
         public async Task<IActionResult> ChangeUserAuth(UserAuth userAuth)
         {

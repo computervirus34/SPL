@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'URWGeometricArabic';
+  src: local('URWGeometricArabic-Light'), url("#{$sourcefile}fonts/URWGeometricArabic/URWGeometricArabic-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'URWGeometricArabic';
+  src: local('URWGeometricArabic-Regular'), url("#{$sourcefile}fonts/URWGeometricArabic/URWGeometricArabic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'URWGeometricArabic';
+  src: local('URWGeometricArabic-Medium'), url("#{$sourcefile}fonts/URWGeometricArabic/URWGeometricArabic-Medium.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'URWGeometricArabic';
+  src: local('URWGeometricArabic-SemiBold'), url("#{$sourcefile}fonts/URWGeometricArabic/URWGeometricArabic-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'URWGeometricArabic';
+  src: local('URWGeometricArabic-Bold'), url("#{$sourcefile}fonts/URWGeometricArabic/URWGeometricArabic-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'URWGeometricArabic';
+  src: local('URWGeometricArabic-ExtraBold'), url("#{$sourcefile}fonts/URWGeometricArabic/URWGeometricArabic-ExtraBold") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'URWGeometricArabic';
+  src: local('URWGeometricArabic-Black'), url("#{$sourcefile}fonts/URWGeometricArabic/URWGeometricArabic-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

@@ -23,6 +23,10 @@ namespace SPL.Controllers
         {
             return View();
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Create(Prospect prospect)
